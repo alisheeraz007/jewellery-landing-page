@@ -12,6 +12,16 @@ class Header extends Component {
         }
     }
 
+    loginDiv = (name) => {
+        if (name) {
+            document.getElementById("loginDiv").style.opacity = 1;
+            document.getElementById("loginDiv").style.marginTop = "20px";
+        } else {
+            document.getElementById("loginDiv").style.opacity = 0;
+            document.getElementById("loginDiv").style.marginTop = "50px";
+        }
+    }
+
     render() {
         return (
             <div className="header">
@@ -34,9 +44,31 @@ class Header extends Component {
                     </span>
 
                     <span className="list">
-                        <span>
+                        <span className="listAll">
+                            <div
+                                id="loginDiv"
+                                onMouseOver={() => this.loginDiv("a")}
+                                onMouseOut={() => this.loginDiv()}
+                            >
+                                <form>
+                                    <span
+                                        style={{ display: "block", fontSize: 16,marginBottom: 5,fontWeight: 400 }}
+                                    >
+                                        Email Address:<sup style={{ color: "red",fontWeight: "bold" }}>*</sup>
+                                    </span>
+                                    <input
+                                        type="text"
+                                    />
+                                </form>
+                            </div>
                             <span style={{ marginRight: 30 }}>MY ACCOUNT</span>
-                            <span style={{ marginRight: 10 }}>LOGIN</span>
+                            <span
+                                onMouseOver={() => this.loginDiv("a")}
+                                onMouseOut={() => this.loginDiv()}
+                                style={{ marginRight: 10 }}
+                            >
+                                LOGIN
+                            </span>
                             <span style={{ fontSize: 15 }}>/</span>
                             <span style={{ marginLeft: 10 }}>CREATE ACCOUNT</span>
                         </span>
@@ -45,7 +77,7 @@ class Header extends Component {
 
                 <div className="secondHeader">
                     <span>
-                        <span className="logo"><img src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?82"/></span>
+                        <span className="logo"><img src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?82" /></span>
                     </span>
                 </div>
             </div>

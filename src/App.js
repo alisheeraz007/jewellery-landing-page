@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './all.css';
-import 'antd/dist/antd.css'; 
+import 'antd/dist/antd.css';
 import MainPage from './components/MainPage'
 import { getData } from './actions/action';
 import { connect } from 'react-redux'
