@@ -4,19 +4,382 @@ html, body{
     font-family: 'Lato', sans-serif;
 }
 
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 890px) {
+    .slider1{
+        background:url('./slide-image-1.jpg');
+        width: 100%;
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        background-position: right;
+        top: 220px;
+        transition: 2s;
+    }
+    .slider2{
+        background:url('./slide-image-2.webp');
+        width: 100%;
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-position: left;
+        opacity: 0;
+        top: 220px;
+        position: absolute;
+        transition: 2s;
+    }
+    .sliderContentDiv{
+        width: 95%;
+        height: 350px;
+        position: absolute;
+        top: 310px;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        z-index: 1;
+    }
+    .sliderContentDiv2{
+        width: 95%;
+        height: 350px;
+        position: absolute;
+        top: 310px;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        z-index: 1;
+    }
+    .sliderContentDiv2 img{
+        width: 350px;
+    }
+    .sliderContentDiv img{
+        width: 350px;
+    }
+    .live{
+        font-size: 20px;
+        margin: 0;
+        font-weight: 300;
+        color: #010101;
+    }
+    .p1{
+        font-size: 12px;
+        margin: 0;
+        font-weight: 400;
+        color: #010101;
+        letter-spacing: 0.09em;
+        border-top: 1px solid #010101;
+        border-bottom: 1px solid #010101;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        margin-bottom: 30px;
+    }
+    .p2{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        color: #666666;
+        padding: 10px 20px;
+        font-weight: lighter;
+        display: block;
+        margin-bottom: 15px;
+    }
+    #sliderIcon1{
+        font-size: 50px !important;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+        z-index: 3;
+    }
+    #sliderIcon2{
+        font-size: 50px !important;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+        z-index: 3;
+    }
+    .header{
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        background-color: white;
+    }
+    .firstHeader{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 13px;
+        font-size: 11px;
+        color: #202020;
+    }
+    .phone{
+        font-size: 11px;
+        margin-left: 0%;
+        display: inline;
+    }
+    .list{
+        float: right;
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 30px;
+        display: none;
+    }
+    .list span{
+        cursor: pointer;
+    }
+    .listAll span:hover{
+        color: #a07936;
+    }
+    .socialIcon{
+        float: right;
+        margin-right: 0%;
+    }
+    .secondHeader{
+        padding: 20px;
+        text-align: center;
+    }
+    .logo{
+        margin-left: 0%;
+    }
+    .seeButton{
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: 1px solid #362f2d;
+        border-radius: 3px;
+        padding: 0 35px;
+        height: 50px;
+        color: #ffffff;
+        background-color: #362f2d;
+        line-height: 50px;
+        letter-spacing: 0.05em;
+        outline: none !important;
+        cursor: pointer;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        transition: 0.7s;
+    }
+    .seeButton:hover{
+        color: #ffffff;
+        border-color: #a07936;
+        background: #a07936;
+    }
+    #loginDiv{
+        display: none;
+        width: 320px;
+        height: 0px;
+        border: 1px solid lightgray;
+        position: fixed;
+        margin-top: 50px;
+        margin-left: -185px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #loginDiv span{
+        color: black;
+        cursor: default;
+    }
+    #loginDiv span:hover{
+        color: black;
+    }
+    #loginDiv input{
+        width: 100%;
+        border: 1px solid lightgrey;
+        height: 40px;
+        font-size: 20px;
+        outline: none;
+    }
+    .loginButton{
+        width: 100%;
+        margin-top: 15px;
+        border: 0px solid lightgray;
+        background-color: transparent;
+        height: 35px;
+        color: gray;
+        font-size: 17px;
+        border-radius: 5px;
+    }
+    .sndHeaderUl{
+        display: none;
+        float: right;        
+        z-index: 7;
+        margin-right: 15%;
+        font-size: 14px;
+    }
+    .sndHeaderUl li{
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        cursor: pointer;
+        height: 50px;
+    }
+    .sndHeaderUl li:hover{
+        color: #a07936;
+    }
+
+    #collectionDiv{
+        display: none;
+        width: 800px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: -100px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #collectionDiv table{
+        width: 100%;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: absolute;
+    }
+    #collectionDiv td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .tds td{
+        color: dimgray;
+        font-family: 'Lato', sans-serif;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    #pagesDiv{
+        display: none;
+        width: 500px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 150px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #pagesDiv td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #pagesDiv table{
+        width: 100%;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: absolute;
+    }
+    #blogDiv{
+        display: none;
+        width: 210px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 300px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .mobileMenu{
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        color: #202020;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mobileMenu svg{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .mobileMenu input{
+        width: 100%;
+        margin-top: 10px;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    #mobileLoginDiv{
+        overflow: hidden;
+        width: 150px;
+        height: 90px;
+        background-color: white;
+        position: absolute;
+        border: 1px solid lightgray;
+        margin-left: 100px;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: 0.7s;
+        opacity: 0;
+    }
+    .mobileMenu p{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        text-align: left;
+        font-size: 18;
+        font-weight: 500;
+    }
+    /* .menu{
+        width: 100%;
+        position: fixed;
+        height: 30vh;
+        z-index: 999;
+        background-color: #ffffff;
+        border-bottom: 1px solid lightgray;
+    } */
 }
 
-@media only screen and (min-width: 600px) {
-    
-}
 
-@media only screen and (min-width: 768px) {
-    
-}
-
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 890px) {
     .slider1{
         background:url('./slide-image-1.jpg');
         width: 100%;
@@ -47,7 +410,7 @@ html, body{
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: center;
-        z-index: 2;
+        z-index: 1;
     }
     .sliderContentDiv2{
         width: 95%;
@@ -57,7 +420,7 @@ html, body{
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: center;
-        z-index: 2;
+        z-index: 1;
     }
     .live{
         font-size: 48px;
@@ -175,16 +538,19 @@ html, body{
     }
     #loginDiv{
         width: 320px;
-        height: 280px;
+        height: 0px;
         border: 1px solid lightgray;
         position: fixed;
         margin-top: 50px;
         margin-left: -185px;
-        opacity: 1;
+        opacity: 0;
         transition: 0.7s;
         background-color: white;
         z-index: 5;
-        padding: 30px;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
     }
     #loginDiv span{
         color: black;
@@ -199,5 +565,432 @@ html, body{
         height: 40px;
         font-size: 20px;
         outline: none;
+    }
+    .loginButton{
+        width: 100%;
+        margin-top: 15px;
+        border: 0px solid lightgray;
+        background-color: transparent;
+        height: 35px;
+        color: gray;
+        font-size: 17px;
+        border-radius: 5px;
+    }
+    .sndHeaderUl{
+        float: right;        
+        z-index: 7;
+        margin-right: 15%;
+        font-size: 14px;
+    }
+    .sndHeaderUl li{
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        cursor: pointer;
+        height: 50px;
+    }
+    .sndHeaderUl li:hover{
+        color: #a07936;
+    }
+
+    #collectionDiv{
+        width: 800px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: -100px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #collectionDiv table{
+        width: 100%;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: absolute;
+    }
+    #collectionDiv td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .tds td{
+        color: dimgray;
+        font-family: 'Lato', sans-serif;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    #pagesDiv{
+        width: 500px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 150px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #pagesDiv td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #pagesDiv table{
+        width: 100%;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: absolute;
+    }
+    #blogDiv{
+        width: 210px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 300px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .mobileMenu{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .slider1{
+        background:url('./slide-image-1.jpg');
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        transition: 2s;
+    }
+    .slider2{
+        background:url('./slide-image-2.webp');
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0;
+        position: absolute;
+        transition: 2s;
+    }
+    .sliderContentDiv{
+        width: 95%;
+        height: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        z-index: 1;
+    }
+    .sliderContentDiv2{
+        width: 95%;
+        height: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        z-index: 1;
+    }
+    .live{
+        font-size: 48px;
+        margin: 0;
+        font-weight: 300;
+        color: #010101;
+    }
+    .p1{
+        font-size: 15px;
+        margin: 0;
+        font-weight: 400;
+        color: #010101;
+        letter-spacing: 0.09em;
+        border-top: 1px solid #010101;
+        border-bottom: 1px solid #010101;
+        width: 56%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        margin-bottom: 50px;
+    }
+    .p2{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 30px;
+        color: #666666;
+        padding: 10px 20px;
+        font-weight: lighter;
+        display: block;
+        margin-bottom: 30px;
+    }
+    #sliderIcon1{
+        font-size: 70px !important;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+        z-index: 3;
+    }
+    #sliderIcon2{
+        font-size: 70px !important;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+        z-index: 3;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+    .firstHeader{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 13px;
+        font-size: 11px;
+        color: #202020;
+    }
+    .phone{
+        font-size: 11px;
+        margin-left: 5%;
+        display: inline;
+    }
+    .list{
+        float: right;
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 30px;
+    }
+    .list span{
+        cursor: pointer;
+    }
+    .listAll span:hover{
+        color: #a07936;
+    }
+    .socialIcon{
+        float: right;
+        margin-right: 10%;
+    }
+    .secondHeader{
+        padding: 20px;
+    }
+    .logo{
+        margin-left: 5%;
+    }
+    .seeButton{
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: 1px solid #362f2d;
+        border-radius: 3px;
+        padding: 0 35px;
+        height: 50px;
+        color: #ffffff;
+        background-color: #362f2d;
+        line-height: 50px;
+        letter-spacing: 0.05em;
+        outline: none !important;
+        cursor: pointer;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        transition: 0.7s;
+    }
+    .seeButton:hover{
+        color: #ffffff;
+        border-color: #a07936;
+        background: #a07936;
+    }
+    #loginDiv{
+        width: 320px;
+        height: 0px;
+        border: 1px solid lightgray;
+        position: fixed;
+        margin-top: 50px;
+        margin-left: -185px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #loginDiv span{
+        color: black;
+        cursor: default;
+    }
+    #loginDiv span:hover{
+        color: black;
+    }
+    #loginDiv input{
+        width: 100%;
+        border: 1px solid lightgrey;
+        height: 40px;
+        font-size: 20px;
+        outline: none;
+    }
+    .loginButton{
+        width: 100%;
+        margin-top: 15px;
+        border: 0px solid lightgray;
+        background-color: transparent;
+        height: 35px;
+        color: gray;
+        font-size: 17px;
+        border-radius: 5px;
+    }
+    .sndHeaderUl{
+        float: right;        
+        z-index: 7;
+        margin-right: 15%;
+        font-size: 14px;
+    }
+    .sndHeaderUl li{
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        cursor: pointer;
+        height: 50px;
+    }
+    .sndHeaderUl li:hover{
+        color: #a07936;
+    }
+
+    #collectionDiv{
+        width: 800px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: -100px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #collectionDiv table{
+        width: 100%;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: absolute;
+    }
+    #collectionDiv td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .tds td{
+        color: dimgray;
+        font-family: 'Lato', sans-serif;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    #pagesDiv{
+        width: 500px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 150px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+    #pagesDiv td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #pagesDiv table{
+        width: 100%;
+        color: #202020;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: absolute;
+    }
+    #blogDiv{
+        width: 210px;
+        height: 0px;
+        border: 0px solid lightgray;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 300px;
+        opacity: 0;
+        transition: 0.7s;
+        background-color: white;
+        z-index: 5;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .mobileMenu{
+        display: none;
     }
 }
