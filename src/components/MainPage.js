@@ -11,6 +11,10 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ScrollAnimation from 'react-animate-on-scroll';
 import SecondPage from './secondPage';
+import ThirdPage from './ThirdPage';
+import ForthPage from './forthPage';
+import FifthPage from './FifthPage';
+import SixthPage from './sixthPage';
 
 
 class MainPage extends Component {
@@ -52,7 +56,7 @@ class MainPage extends Component {
                 <div style={{ height: "100vh" }} className="mainContainer">
                     {this.state.slide === 1 ?
                         <div className="sliderContentDiv" onMouseOver={() => this.sliderIconTrue("a")} onMouseOut={() => this.sliderIconTrue()}>
-                            <ScrollAnimation duration={2} animateIn="fadeIn">
+                            <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
                                 <p className="live">Live the moment</p>
                             </ScrollAnimation>
                             <ArrowBackIosIcon
@@ -60,7 +64,7 @@ class MainPage extends Component {
                                 style={{ float: "left" }}
                                 onClick={() => this.setSlide()}
                             />
-                            <ScrollAnimation duration={1} animateIn="slideInLeft">
+                            <ScrollAnimation animateOnce duration={1} animateIn="slideInLeft">
                                 <img src={head} />
                             </ScrollAnimation>
 
@@ -69,7 +73,7 @@ class MainPage extends Component {
                                 style={{ float: "right" }}
                                 onClick={() => this.setSlide()}
                             />
-                            <ScrollAnimation duration={2} animateIn="fadeIn">
+                            <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
                                 <p className="p1">
                                     LOREM IPSUM DOLOR SITAMET ABC ADJ KNKLNAS KKLNADS NN
                                 </p>
@@ -87,7 +91,7 @@ class MainPage extends Component {
                                 style={{ float: "left" }}
                                 onClick={() => this.setSlide()}
                             />
-                            <ScrollAnimation duration={1} animateIn="slideInLeft">
+                            <ScrollAnimation animateOnce duration={1} animateIn="slideInLeft">
                                 <img src={head2} />
                             </ScrollAnimation>
 
@@ -96,10 +100,10 @@ class MainPage extends Component {
                                 style={{ float: "right" }}
                                 onClick={() => this.setSlide()}
                             />
-                            <ScrollAnimation duration={1} animateIn="slideInLeft">
+                            <ScrollAnimation animateOnce duration={1} animateIn="slideInLeft">
                                 <span className="p2">Love's imbrace</span>
                             </ScrollAnimation>
-                            <ScrollAnimation duration={2} animateIn="fadeIn">
+                            <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
                                 <a className="seeButton">
                                     SEE COLLECTION
                         </a>
@@ -116,10 +120,39 @@ class MainPage extends Component {
                     </div>
                 </div >
 
-                <div className="secondContainer">
-                    <SecondPage/>
+                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
+                    <div className="secondContainer">
+                        <SecondPage />
+                    </div>
+                </ScrollAnimation>
+
+                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
+                    <div className="secondContainer">
+                        <ThirdPage />
+                    </div>
+                </ScrollAnimation>
+
+                <div className="thirdContainer">
+                    <ForthPage />
                 </div>
 
+                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
+                    <div className="secondContainer">
+                        <FifthPage />
+                    </div>
+                </ScrollAnimation>
+
+                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
+                    <div className="secondContainer">
+                        <SecondPage name="a" />
+                    </div>
+                </ScrollAnimation>
+
+                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
+                    <div className="secondContainer">
+                        <SixthPage />
+                    </div>
+                </ScrollAnimation>
             </>
         )
     }

@@ -10,7 +10,16 @@ import head2 from '../slide-image-caption-2.webp'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ScrollAnimation from 'react-animate-on-scroll';
-
+import logo from '../home_line.png'
+import first from '../collectionImages/first.png'
+import second from '../collectionImages/second.png'
+import third from '../collectionImages/third.png'
+import forth from '../collectionImages/forth.png'
+import firstM from '../product images mobile/first.webp'
+import secondM from '../product images mobile/second.webp'
+import thirdM from '../product images mobile/third.webp'
+import forthM from '../product images mobile/forth.webp'
+import { Carousel } from 'antd';
 
 class SecondPage extends Component {
     constructor(props) {
@@ -20,36 +29,71 @@ class SecondPage extends Component {
         }
     }
 
-    sliderIconTrue = (name) => {
-        if (name) {
-            document.getElementById("sliderIcon1").style.opacity = 1
-            document.getElementById("sliderIcon2").style.opacity = 1
-        }
-        else {
-            document.getElementById("sliderIcon1").style.opacity = 0
-            document.getElementById("sliderIcon2").style.opacity = 0
-        }
-    }
-
-    setSlide = () => {
-        this.setState({
-            slide: this.state.slide === 1 ? 2 : 1
-        }, () => {
-            if (this.state.slide === 1) {
-                document.getElementById("slider1").style.opacity = 1;
-                document.getElementById("slider2").style.opacity = 0;
-            } else {
-                document.getElementById("slider1").style.opacity = 0;
-                document.getElementById("slider2").style.opacity = 1;
-            }
-        })
-    }
-
     render() {
         return (
             <>
-                <div style={{ height: "100vh" }} className="mainContainer2">
-                    <h6>POPULAR COLLECTIONS</h6>
+                <div className="mainContainer2">
+                    <h6>{this.props.name ? "FEATURED PRODUCTS" : "POPULAR COLLECTIONS"}<br /><img src={logo} /></h6>
+                    <div className="collectionDiv">
+                        <div>
+                            <img src={first} />
+                            <h6>BRACELETS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+                        <div>
+                            <img src={second} />
+                            <h6>EARINGS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+                        <div>
+                            <img src={third} />
+                            <h6>NECKLACES</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+                        <div>
+                            <img src={forth} />
+                            <h6>RINGS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+                    </div>
+
+                    <Carousel className="collectionDivM" autoplay>
+                        <div id="mDiv1" style={{ zIndex: 2, opacity: 1 }}>
+                            <img src={firstM} />
+                            <h6>BRACELETS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+
+                        <div id="mDiv2" style={{ zIndex: 1, opacity: 0 }}>
+                            <img src={secondM} />
+                            <h6>BRACELETS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+
+                        <div id="mDiv2" style={{ zIndex: 1, opacity: 0 }}>
+                            <img src={thirdM} />
+                            <h6>BRACELETS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+
+                        <div id="mDiv2" style={{ zIndex: 1, opacity: 0 }}>
+                            <img src={forthM} />
+                            <h6>BRACELETS</h6>
+                            <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                            <p>See the Collection</p>
+                        </div>
+                    </Carousel>
+
+                    {/* <div className="collectionDivM">
+                        
+                    </div> */}
                 </div >
             </>
         )

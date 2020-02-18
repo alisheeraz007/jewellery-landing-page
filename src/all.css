@@ -376,8 +376,506 @@ html, body{
         background-color: #ffffff;
         border-bottom: 1px solid lightgray;
     } */
+    .mainContainer2{
+        width: 100%;
+        overflow: hidden;
+    }
+    .mainContainer3{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 80px;
+        background-color: #fffbf1;
+    }
+    .mainContainer2 h6, .mainContainer6 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+        line-height: 22px;
+    }
+    .mainContainer3 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        line-height: 20px;
+        margin-bottom: 56px;
+        font-size: 22px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+        margin-top: 50px;
+    }
+    .collectionDiv{
+        display: none;
+    }
+    .collectionDivM{
+        width: 90%;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+    }
+    .collectionDivM div{
+        width: 100%;
+        margin-left: auto;
+        height: 300px;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #fffbf1;
+        transition: 0.7s;
+        text-align: center;
+    }
+    .collectionDivM div:hover{
+        background-color: #ffeac5;
+    }
+    .collectionDivM div img{
+        height: 100%;
+    }
+    .collectionDivM h6{
+        position: relative;
+        margin: 0px;
+        color: #202020;
+        top: -75px;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #202020;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .collectionDivM p {
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        color: #a07936;
+        font-weight: 400;
+        position: relative;
+        top: -65px;
+        margin: 0px;
+    }
+    .collectionDivM hr{
+        width: 15%;
+        height: 1px;
+        border: 0px;
+        background-color: rgb(160, 121, 54);
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -72px;
+    }
+    .slick-dots li{
+        background-color: #000000;
+        margin: 0 8px !important;
+    }
+    .slick-active button{
+        background-color: rgb(160, 121, 54) !important;
+    }
+    .slick-slide img{
+        display: inline !important;
+    }
+
+    .productList{
+        display: flex;
+        width: 100%;
+        flex-flow: wrap;
+    }
+    .productList div{
+        width: 49%;
+        height: 220px;
+        background: white;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: 0.7s;
+        cursor: pointer;
+    }
+    .productList div:hover{
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+        box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+    }
+    .productImage{
+        display: block;
+        height: 155px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 0.7s;
+    }
+    #productReview1{
+        margin-top: -18px;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview2{
+        margin-top: -18px;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview3{
+        margin-top: -18px;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview4{
+        margin-top: -18px;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview5{
+        margin-top: -18px;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview6{
+        margin-top: -18px;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    .icon1{
+        display: inline-block;
+        transition: 0.7s;
+        width: 40%;
+        text-align: right;
+        height: 100%;
+        padding-right: 15px;
+    }
+    .icon1:hover{
+        background-color: #a07936;
+    }
+    .icon2{
+        display: inline-block;
+        transition: 0.7s;
+        width: 20%;
+        text-align: center;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        height: 100%;
+    }
+    .icon2:hover{
+        background-color: #a07936;
+    }
+    .icon3{
+        display: inline-block;
+        transition: 0.7s;
+        width: 40%;
+        text-align: left;
+        height: 100%;
+        padding-left: 15px;
+    }
+    .icon3:hover{
+        background-color: #a07936;
+    }
+    .title{
+        display: inline-block;
+        width: 60%;
+        height: 87px;
+        border-top: 1px solid lightgray;
+        overflow: hidden;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    .titlep{
+        color: #202020;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        zoom: 1;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    .price{
+        display: inline-block;
+        width: 40%;
+        height: 87px;
+        border-top: 1px solid lightgray;
+        overflow: hidden;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .cPrice{
+        font-weight: 700;
+        color: #a07936;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+    .sPrice{
+        font-size: 10px;
+        text-decoration: line-through;
+        text-align: center;
+        margin: 0px;
+        letter-spacing: 1px;
+    }
+    .title svg{
+        font-size: 12px;
+    }
+
+    .mainContainer4{
+        height: 50vh;
+        width: 100%;
+        min-height: 500px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 80%;
+        background-size: 140%;
+        text-align: center;
+        overflow: hidden;
+        background-blend-mode: lighten;
+    }
+    .mainContainer4 div{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .mainContainer4 p{
+        color: #fff;
+        font-weight: 400;
+        line-height: 20px;
+        font-size: 15px;
+        margin-top: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainContainer4 hr{
+        width: 30px;
+        border: 0;
+        height: 2px;
+        background-color: #eec989;
+    }
+    .mainContainer4 a{
+        color: #eec989;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .mainContainer4 a:hover{
+        color: #eec989 !important;
+    }
+
+    .mainContainer5 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+        line-height: 22px;
+        margin-top: 25px;
+    }
+
+    .newsDiv{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        /* height: 5px; */
+        margin-bottom: 50px;
+    }
+    .newsImgDiv{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+    .newsImgDiv img{
+        width: 100%;
+    }
+    .newsCommentsDiv{
+        width: 100%;
+        height: 100%;
+    }
+    .reviewDiv{
+        display: flex;
+        width: 100%;
+        height: 33%;
+        border-bottom: 1px solid lightgray;
+        padding-top: 20px;
+    }
+    .dateDiv{
+        width: 110px;
+        height: 110px;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+    }
+    .dateDiv p{
+        margin: 0;
+        width: 100%;
+        background-color: #a07936;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        font-family: 'Belleza', sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 8px 0;
+        display: block;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .dateDiv span{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #202020;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
+        border-radius: 20px;
+        font-size: 50px;
+    }
+    .comment{
+        width: 76%;
+    }
+    .comment h4{
+        color: #a07936;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        width: 100%;
+        padding-left: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2px;
+        cursor: pointer;
+    }
+    .comment span{
+        padding-left: 30px;
+        font-size: 16px;
+        display: inherit;
+        text-align: justify;
+        width: 80%;
+    }
+    .comment span svg{
+        padding-top: 4px;
+    }
+    .comment p{
+        padding-left: 30px;
+        padding-top: 20px;
+        color: black;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    
+    .mainContainer6{
+        width: 100%;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .mainContainer6 p{
+        width: 100%;
+        text-align: center;
+        margin-top: -10px;
+        color: #202020;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .mainContainer6 input{
+        border: 1px solid lightgray;
+        width: 80%;
+        height: 40px;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.7s;
+    }
+    .mainContainer6 input:focus{
+        border: 1px solid #a07936;
+    }
+    .mainContainer6 button{
+        height: 40px;
+        background-color: #a07936;
+        color: white;
+        border: 0;
+        position: relative;
+        top: 4px;
+    }
+    .mainContainer6 button svg{
+        transform: rotate(310deg);
+    }
 }
 
+@media only screen and (min-width: 455px) {
+    .productImage{
+        width: 50%;
+        height: 200px;
+    }
+    .productList div{
+        height: 300px !important;
+    }
+    #productReview1{
+        margin-top: 0px !important;
+    }
+    #productReview2{
+        margin-top: 0px !important;
+    }
+    #productReview3{
+        margin-top: 0px !important;
+    }
+    #productReview4{
+        margin-top: 0px !important;
+    }
+    #productReview5{
+        margin-top: 0px !important;
+    }
+    #productReview6{
+        margin-top: 0px !important;
+    }
+}
 
 @media only screen and (min-width: 890px) {
     .slider1{
@@ -684,6 +1182,450 @@ html, body{
     }
     .mobileMenu{
         display: none;
+    }
+
+    .mainContainer2{
+        margin-bottom: 60px
+    }
+    .mainContainer2 h6, .mainContainer6 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        padding-top: 56px;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+    }
+    .collectionDiv{
+        display: flex;
+        width: 100%;
+    }
+    .collectionDiv div{
+        width: 22%;
+        margin-left: auto;
+        height: 290px;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #fffbf1;
+        cursor: pointer;
+        transition: 0.7s;
+        text-align: center;
+    }
+    .collectionDiv div:hover{
+        background-color: #ffeac5;
+    }
+    .collectionDiv div img{
+        width: 100%;
+    }
+    .collectionDiv h6{
+        position: relative;
+        margin: 0px;
+        color: #202020;
+        top: -75px;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #202020;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .collectionDiv p {
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        color: #a07936;
+        font-weight: 400;
+        position: relative;
+        top: -65px;
+        margin: 0px;
+    }
+    .collectionDiv hr{
+        width: 15%;
+        height: 1px;
+        border: 0px;
+        background-color: rgb(160, 121, 54);
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -72px;
+    }
+
+    .mainContainer3{
+        /* height: 100vh; */
+        background-color: #fffbf1;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainContainer3 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        padding-top: 56px;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+    }
+    .productList{
+        display: flex;
+        width: 100%;
+        flex-flow: wrap;
+    }
+    .productList div{
+        width: 32%;
+        height: 350px !important;
+        background: white;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 2px;
+        margin-top: 20px;
+        transition: 0.7s;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .productList div:hover{
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+-moz-box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+    }
+    .productImage{
+        display: block;
+        height: 250px;
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+        overflow: hidden;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 0.7s;
+    }
+    #productReview1{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview2{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview3{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview4{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview5{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview6{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    .icon1{
+        display: inline-block;
+        transition: 0.7s;
+        width: 40%;
+        text-align: right;
+        height: 100%;
+        padding-right: 15px;
+    }
+    .icon1:hover{
+        background-color: #a07936;
+    }
+    .icon2{
+        display: inline-block;
+        transition: 0.7s;
+        width: 20%;
+        text-align: center;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        height: 100%;
+    }
+    .icon2:hover{
+        background-color: #a07936;
+    }
+    .icon3{
+        display: inline-block;
+        transition: 0.7s;
+        width: 40%;
+        text-align: left;
+        height: 100%;
+        padding-left: 15px;
+    }
+    .icon3:hover{
+        background-color: #a07936;
+    }
+    .title{
+        display: inline-block;
+        width: 60%;
+        height: 87px;
+        border-top: 1px solid lightgray;
+        overflow: hidden;
+        padding-left: 20px;
+    }
+    .titlep{
+        color: #202020;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 500;
+        zoom: 1;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    .price{
+        display: inline-block;
+        width: 40%;
+        height: 87px;
+        border-top: 1px solid lightgray;
+        overflow: hidden;
+        padding-left: 20px;
+    }
+    .cPrice{
+        font-weight: 700;
+        color: #a07936;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+    .sPrice{
+        font-size: 13px;
+        text-decoration: line-through;
+        text-align: center;
+        margin: 0px;
+        letter-spacing: 1px;
+    }
+    .collectionDivM{
+        display: none !important;
+    }
+
+    .mainContainer4{
+        height: 50vh;
+        width: 100%;
+        min-height: 500px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 80%;
+        background-size: 140%;
+        text-align: center;
+        overflow: hidden;
+    }
+    .mainContainer4 div{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .mainContainer4 p{
+        color: #fff;
+        font-weight: 400;
+        line-height: 20px;
+        font-size: 15px;
+        margin-top: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainContainer4 hr{
+        width: 30px;
+        border: 0;
+        height: 2px;
+        background-color: #eec989;
+    }
+    .mainContainer4 a{
+        color: #eec989;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .mainContainer4 a:hover{
+        color: #eec989 !important;
+    }
+    .mainContainer5 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        padding-top: 56px;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+    }
+
+    .newsDiv{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+        /* height: 6 00px; */
+        margin-bottom: 50px;
+    }
+    .newsImgDiv{
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+    }
+    .newsImgDiv img{
+        width: 100%;
+    }
+    .newsCommentsDiv{
+        width: 50%;
+        height: 100%;
+    }
+    .reviewDiv{
+        display: flex;
+        width: 100%;
+        height: 33%;
+        border-bottom: 1px solid lightgray;
+        padding-top: 20px;
+    }
+    .dateDiv{
+        width: 110px;
+        height: 80%;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        margin-left: 20px;
+    }
+    .dateDiv p{
+        margin: 0;
+        width: 100%;
+        background-color: #a07936;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        font-family: 'Belleza', sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 8px 0;
+        display: block;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .dateDiv span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #202020;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
+        border-radius: 20px;
+        font-size: 50px;
+    }
+    .comment{
+        width: 76%;
+    }
+    .comment h4{
+        color: #a07936;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        width: 100%;
+        padding-left: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2px;
+        cursor: pointer;
+    }
+    .comment span{
+        padding-left: 30px;
+        font-size: 16px;
+    }
+    .comment span svg{
+        padding-top: 4px;
+    }
+    .comment p{
+        padding-left: 30px;
+        padding-top: 20px;
+        color: black;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .mainContainer6{
+        width: 100%;
+        text-align: center;
+    }
+    .mainContainer6 p{
+        width: 100%;
+        text-align: center;
+        margin-top: -10px;
+        color: #202020;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .mainContainer6 input{
+        border: 1px solid lightgray;
+        width: 40%;
+        height: 40px;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.7s;
+    }
+    .mainContainer6 input:focus{
+        border: 1px solid #a07936;
+    }
+    .mainContainer6 button{
+        height: 40px;
+        background-color: #a07936;
+        color: white;
+        border: 0;
+        position: relative;
+        top: 4px;
+    }
+    .mainContainer6 button svg{
+        transform: rotate(310deg);
     }
 }
 
@@ -992,5 +1934,452 @@ html, body{
     }
     .mobileMenu{
         display: none;
+    }
+
+    .mainContainer2{
+        margin-bottom: 60px
+    }
+    .mainContainer2 h6, .mainContainer6 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        padding-top: 56px;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+    }
+    .collectionDiv{
+        display: flex;
+        width: 100%;
+    }
+    .collectionDiv div{
+        width: 22%;
+        margin-left: auto;
+        height: 290px;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #fffbf1;
+        cursor: pointer;
+        transition: 0.7s;
+        text-align: center;
+    }
+    .collectionDiv div:hover{
+        background-color: #ffeac5;
+    }
+    .collectionDiv div img{
+        width: 100%;
+    }
+    .collectionDiv h6{
+        position: relative;
+        margin: 0px;
+        color: #202020;
+        top: -130px;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #202020;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .collectionDiv p {
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        color: #a07936;
+        font-weight: 400;
+        position: relative;
+        top: -115px;
+        margin: 0px;
+    }
+    .collectionDiv hr{
+        width: 15%;
+        height: 1px;
+        border: 0px;
+        background-color: rgb(160, 121, 54);
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -125px;
+    }
+
+    .mainContainer3{
+        /* height: 100vh; */
+        background-color: #fffbf1;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainContainer3 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        padding-top: 56px;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+    }
+    .productList{
+        display: flex;
+        width: 100%;
+        flex-flow: wrap;
+    }
+    .productList div{
+        width: 32%;
+        height: 400px !important;
+        background: white;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: 0.7s;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .productList div:hover{
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+        box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
+        padding: 5px;
+    }
+    .productImage{
+        display: block;
+        height: 290px;
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+        overflow: hidden;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 0.7s;
+    }
+    #productReview1{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview2{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview3{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview4{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview5{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #productReview6{
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border-top: 1px solid lightgray;
+        color: black;
+        opacity: 0;
+        transition: 0.7s;
+    }
+    .icon1{
+        display: inline-block;
+        transition: 0.7s;
+        width: 40%;
+        text-align: right;
+        height: 100%;
+        padding-right: 15px;
+    }
+    .icon1:hover{
+        background-color: #a07936;
+    }
+    .icon2{
+        display: inline-block;
+        transition: 0.7s;
+        width: 20%;
+        text-align: center;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        height: 100%;
+    }
+    .icon2:hover{
+        background-color: #a07936;
+    }
+    .icon3{
+        display: inline-block;
+        transition: 0.7s;
+        width: 40%;
+        text-align: left;
+        height: 100%;
+        padding-left: 15px;
+    }
+    .icon3:hover{
+        background-color: #a07936;
+    }
+    .title{
+        display: inline-block;
+        width: 60%;
+        height: 87px;
+        border-top: 1px solid lightgray;
+        overflow: hidden;
+        padding-left: 20px;
+    }
+    .titlep{
+        color: #202020;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 500;
+        zoom: 1;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    .price{
+        display: inline-block;
+        width: 40%;
+        height: 87px;
+        border-top: 1px solid lightgray;
+        overflow: hidden;
+        padding-left: 20px;
+    }
+    .cPrice{
+        font-weight: 700;
+        color: #a07936;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+    .sPrice{
+        font-size: 13px;
+        text-decoration: line-through;
+        text-align: center;
+        margin: 0px;
+        letter-spacing: 1px;
+    }
+    .collectionDivM{
+        display: none !important;
+    }
+
+    .mainContainer4{
+        height: 50vh;
+        width: 100%;
+        min-height: 500px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 80%;
+        background-size: 140%;
+        text-align: center;
+        overflow: hidden;
+    }
+    .mainContainer4 div{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .mainContainer4 p{
+        color: #fff;
+        font-weight: 400;
+        line-height: 20px;
+        font-size: 15px;
+        margin-top: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainContainer4 hr{
+        width: 30px;
+        border: 0;
+        height: 2px;
+        background-color: #eec989;
+    }
+    .mainContainer4 a{
+        color: #eec989;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .mainContainer4 a:hover{
+        color: #eec989 !important;
+    }
+    .mainContainer5 h6{
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        padding-top: 56px;
+        margin-bottom: 56px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Belleza', sans-serif;
+    }
+
+    .newsDiv{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+        /* height: 470px; */
+        margin-bottom: 50px;
+    }
+    .newsImgDiv{
+        width: 50%;
+        height: 100%;
+    }
+    .newsImgDiv img{
+        width: 100%;
+    }
+    .newsCommentsDiv{
+        width: 50%;
+        height: 100%;
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-right: 0px;
+    }
+    .reviewDiv{
+        display: flex;
+        width: 100%;
+        height: 33%;
+        border-bottom: 1px solid lightgray;
+        padding-top: 20px;
+    }
+    .dateDiv{
+        width: 110px;
+        height: 80%;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+    }
+    .dateDiv p{
+        margin: 0;
+        width: 100%;
+        background-color: #a07936;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        font-family: 'Belleza', sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 8px 0;
+        display: block;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .dateDiv span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #202020;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
+        border-radius: 20px;
+        font-size: 50px;
+    }
+    .comment{
+        width: 76%;
+    }
+    .comment h4{
+        color: #a07936;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        width: 100%;
+        padding-left: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2px;
+        cursor: pointer;
+    }
+    .comment span{
+        padding-left: 30px;
+        font-size: 16px;
+    }
+    .comment span svg{
+        padding-top: 4px;
+    }
+    .comment p{
+        padding-left: 30px;
+        padding-top: 20px;
+        color: black;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .mainContainer6{
+        width: 100%;
+        text-align: center;
+    }
+    .mainContainer6 p{
+        width: 100%;
+        text-align: center;
+        margin-top: -10px;
+        color: #202020;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .mainContainer6 input{
+        border: 1px solid lightgray;
+        width: 40%;
+        height: 40px;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.7s;
+    }
+    .mainContainer6 input:focus{
+        border: 1px solid #a07936;
+    }
+    .mainContainer6 button{
+        height: 40px;
+        background-color: #a07936;
+        color: white;
+        border: 0;
+        position: relative;
+        top: 4px;
+    }
+    .mainContainer6 button svg{
+        transform: rotate(310deg);
     }
 }

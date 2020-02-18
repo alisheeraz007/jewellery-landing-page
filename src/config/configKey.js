@@ -1,11 +1,12 @@
-// const config = {
-//   apiKey: "AIzaSyAnTmYdp4UWM9WRwkl6W3CX5sLfya4aSxY",
-//   authDomain: "todolist-3c8d3.firebaseapp.com",
-//   databaseURL: "https://todolist-3c8d3.firebaseio.com",
-//   projectId: "todolist-3c8d3",
-//   storageBucket: "todolist-3c8d3.appspot.com",
-//   messagingSenderId: "44008112369",
-//   appId: "1:44008112369:web:51c5a53bff3feb62"
-// };
+const config = {
+    apiKey: "AIzaSyCDd668gy-HFMwdfQjx3WOanyjbmRVYQ_c",
+    authDomain: "jewelery-web.firebaseapp.com",
+    databaseURL: "https://jewelery-web.firebaseio.com",
+    projectId: "jewelery-web",
+    storageBucket: "jewelery-web.appspot.com",
+    messagingSenderId: "143884647439",
+    appId: "1:143884647439:web:b735b62005a5a6e32d377a",
+    measurementId: "G-8C6D58Z348"
+};
 
-// export default config;
+export default config;

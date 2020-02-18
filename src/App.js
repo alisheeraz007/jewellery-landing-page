@@ -6,10 +6,10 @@ import MainPage from './components/MainPage'
 import { getData } from './actions/action';
 import { connect } from 'react-redux'
 import Header from './components/Header';
-// import firebase from 'firebase';
-// import config from './config/configKey'
+import firebase from 'firebase';
+import config from './config/configKey'
 
-// firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 class App extends Component {
   constructor() {
