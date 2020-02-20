@@ -368,14 +368,13 @@ html, body{
         font-size: 18;
         font-weight: 500;
     }
-    /* .menu{
+    .menu{
         width: 100%;
-        position: fixed;
         height: 30vh;
         z-index: 999;
         background-color: #ffffff;
         border-bottom: 1px solid lightgray;
-    } */
+    }
     .mainContainer2{
         width: 100%;
         overflow: hidden;
@@ -813,6 +812,7 @@ html, body{
         width: 100%;
         text-align: center;
         margin-top: 80px;
+        border-bottom: 1px solid lightgray;
     }
     .mainContainer6 p{
         width: 100%;
@@ -827,7 +827,7 @@ html, body{
         border: 1px solid lightgray;
         width: 80%;
         height: 40px;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         padding-left: 20px;
         font-size: 14px;
         outline: none;
@@ -846,6 +846,138 @@ html, body{
     }
     .mainContainer6 button svg{
         transform: rotate(310deg);
+    }
+
+    .mainContainer7{
+        padding-top: 30px;
+        font-family: 'Belleza', sans-serif;
+    }
+    .mainContainer7 div{
+        display: inline-block;
+        width: 40%;
+        margin: 15px;
+    }
+    .mainContainer7 h2{
+        margin-bottom: 15px;
+    }
+    .mainContainer7 p{
+        font-size: 15px;
+        color: #000000;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.7s;
+        cursor: pointer;
+    }
+    .mainContainer7 p:hover{
+        color: #a07936;
+    }
+    .ant-drawer-body{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-top: 2px !important;
+    }
+
+    .ant-collapse-content-box p{
+        /* margin: 0; */
+        margin-left: 45px;
+        /* padding-left: 5px; */
+        /* border-bottom: 1px solid lightgrey; */
+    }
+
+    .productContainer{
+        position: absolute;
+        width: 100%;
+        top: 243px;
+        padding: 10px;
+        padding-left: 50px;
+        background-color: #f2e4cc;
+        font-size: 18px !important;
+    }
+    .addCart tr{
+        height: 45px !important;
+    }
+    .productContainer span{
+        font-size: 16px !important;
+        cursor: pointer;
+    }
+    .productContainerImageDiv{
+        position: relative;
+        width: 100%;
+        top: 310px;
+        text-align: center;
+    }
+    .productContainerImageDiv h2{
+        margin-bottom: 50px;
+    }
+    .productContainerImageDivFlex{
+        display: block;
+        justify-content: space-evenly;
+        zoom: 85% !important;
+    }
+    .addCart{
+        border-left: 1px solid lightgray;
+    }
+    .quantityDiv input{
+        border: 1px solid lightgrey;
+        outline: none;
+        height: 40px;
+        width: 70px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .quantityDiv button{
+        border: 0;
+        width: 40px;
+        height: 40px;
+        color: #202020;
+        cursor: pointer;
+    }
+    .quantityDiv h1{
+        margin-top: 20px;
+        font-size: 35px;
+    }
+    .quantityDiv h1 span{
+        font-size: 18px;
+        font-weight: 500;
+        color: #cccccc;
+        text-decoration: line-through;
+    }
+    .productDescription{
+        text-align: justify;
+        padding-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .productDescription p{
+        font-size: 15px;
+        color: #202020;
+    }
+    .addToCartButton{
+        width: 95% !important;
+        background-color: transparent !important;
+        border: 1px solid rgb(160, 121, 54) !important;
+        color: rgb(160, 121, 54) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        height: 50px !important;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: 0.6s;
+    }
+    .addToCartButton:hover{
+        color: white !important;
+        background-color: rgb(160, 121, 54) !important;
+    }
+    .productContainerImageDivFlex1{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .productContainerImageDivFlex2{
+        width: 100%;
+        padding: 20px;
     }
 }
 
@@ -972,7 +1104,7 @@ html, body{
         z-index: 3;
     }
     .header{
-        position: fixed;
+        position: absolute;
         width: 100%;
         z-index: 2;
     }
@@ -1593,6 +1725,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
     .mainContainer6{
         width: 100%;
         text-align: center;
+        border-bottom: 1px solid lightgray;
     }
     .mainContainer6 p{
         width: 100%;
@@ -1607,7 +1740,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
         border: 1px solid lightgray;
         width: 40%;
         height: 40px;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         padding-left: 20px;
         font-size: 14px;
         outline: none;
@@ -1626,6 +1759,125 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
     }
     .mainContainer6 button svg{
         transform: rotate(310deg);
+    }
+
+    .mainContainer7{
+        display: flex;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 70px;
+        padding-bottom: 40px;
+        justify-content: space-evenly;
+        font-family: 'Belleza', sans-serif;
+    }
+    .mainContainer7 h2{
+        margin-bottom: 25px;
+    }
+    .mainContainer7 p{
+        font-size: 16px;
+        color: #000000;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.7s;
+        cursor: pointer;
+    }
+    .mainContainer7 p:hover{
+        color: #a07936;
+    }
+
+    .productContainer{
+        position: absolute;
+        width: 100%;
+        top: 140px;
+        padding: 10px;
+        padding-left: 50px;
+        background-color: #f2e4cc;
+        font-size: 18px !important;
+    }
+    .addCart tr{
+        height: 45px !important;
+    }
+    .productContainer span{
+        font-size: 16px !important;
+        cursor: pointer;
+    }
+    .productContainerImageDiv{
+        position: relative;
+        width: 100%;
+        top: 200px;
+        text-align: center;
+    }
+    .productContainerImageDiv h2{
+        margin-bottom: 50px;
+    }
+    .productContainerImageDivFlex{
+        display: flex;
+        justify-content: space-evenly;
+        zoom: 85% !important;
+    }
+    .addCart{
+        border-left: 1px solid lightgray;
+    }
+    .quantityDiv input{
+        border: 1px solid lightgrey;
+        outline: none;
+        height: 40px;
+        width: 70px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .quantityDiv button{
+        border: 0;
+        width: 40px;
+        height: 40px;
+        color: #202020;
+        cursor: pointer;
+    }
+    .quantityDiv h1{
+        margin-top: 20px;
+        font-size: 35px;
+    }
+    .quantityDiv h1 span{
+        font-size: 18px;
+        font-weight: 500;
+        color: #cccccc;
+        text-decoration: line-through;
+    }
+    .productDescription{
+        text-align: justify;
+        padding-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .productDescription p{
+        font-size: 15px;
+        color: #202020;
+    }
+    .addToCartButton{
+        width: 95% !important;
+        background-color: transparent !important;
+        border: 1px solid rgb(160, 121, 54) !important;
+        color: rgb(160, 121, 54) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        height: 50px !important;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: 0.6s;
+    }
+    .addToCartButton:hover{
+        color: white !important;
+        background-color: rgb(160, 121, 54) !important;
+    }
+    .productContainerImageDivFlex1{
+        width: 50%;
+        height: 670px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .productContainerImageDivFlex2{
+        width: 50%;
+        padding-left: 20px;
     }
 }
 
@@ -1724,7 +1976,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
         z-index: 3;
     }
     .header{
-        position: fixed;
+        position: absolute;
         width: 100%;
         z-index: 2;
     }
@@ -2348,6 +2600,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
     .mainContainer6{
         width: 100%;
         text-align: center;
+        border-bottom: 1px solid lightgray;
     }
     .mainContainer6 p{
         width: 100%;
@@ -2362,7 +2615,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
         border: 1px solid lightgray;
         width: 40%;
         height: 40px;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         padding-left: 20px;
         font-size: 14px;
         outline: none;
@@ -2382,4 +2635,123 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
     .mainContainer6 button svg{
         transform: rotate(310deg);
     }
+
+    .mainContainer7{
+        display: flex;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 70px;
+        padding-bottom: 40px;
+        justify-content: space-evenly;
+        font-family: 'Belleza', sans-serif;
+    }
+    .mainContainer7 h2{
+        margin-bottom: 25px;
+    }
+    .mainContainer7 p{
+        font-size: 16px;
+        color: #000000;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.7s;
+        cursor: pointer;
+    }
+    .mainContainer7 p:hover{
+        color: #a07936;
+    }
+    .productContainer{
+        position: absolute;
+        width: 100%;
+        top: 120px;
+        padding: 10px;
+        padding-left: 50px;
+        background-color: #f2e4cc;
+        font-size: 18px !important;
+    }
+    .productContainer span{
+        font-size: 16px !important;
+        cursor: pointer;
+    }
+    .productContainerImageDiv{
+        position: relative;
+        width: 100%;
+        top: 200px;
+        text-align: center;
+    }
+    .productContainerImageDiv h2{
+        margin-bottom: 50px;
+    }
+    .productContainerImageDivFlex{
+        display: flex;
+        justify-content: space-evenly;
+        zoom: 85% !important;
+    }
+    .addCart{
+        border-left: 1px solid lightgray;
+    }
+    .quantityDiv input{
+        border: 1px solid lightgrey;
+        outline: none;
+        height: 40px;
+        width: 70px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .quantityDiv button{
+        border: 0;
+        width: 40px;
+        height: 40px;
+        color: #202020;
+        cursor: pointer;
+    }
+    .quantityDiv h1{
+        margin-top: 25px;
+        font-size: 55px;
+    }
+    .quantityDiv h1 span{
+        font-size: 20px;
+        font-weight: 500;
+        color: #cccccc;
+        text-decoration: line-through;
+    }
+    .productDescription{
+        text-align: justify;
+        padding-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .productDescription p{
+        font-size: 15px;
+        color: #202020;
+    }
+    .addToCartButton{
+        width: 95% !important;
+        background-color: transparent !important;
+        border: 1px solid rgb(160, 121, 54) !important;
+        color: rgb(160, 121, 54) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        height: 50px !important;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: 0.6s;
+    }
+    .addToCartButton:hover{
+        color: white !important;
+        background-color: rgb(160, 121, 54) !important;
+    }
+    .addCart tr{
+        height: 50px !important;
+    }
+    .productContainerImageDivFlex1{
+        width: 50%;
+        height: 670px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .productContainerImageDivFlex2{
+        width: 50%;
+        padding-left: 20px;
+    }
+    
 }

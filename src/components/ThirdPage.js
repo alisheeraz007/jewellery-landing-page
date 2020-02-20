@@ -34,22 +34,38 @@ class ThirdPage extends Component {
         }
     }
 
+    changePath = (name, price, ev) => {
+        let id = ""
+        if (ev.target.nodeName !== "SPAN") {
+            id = ev.target.parentNode.id
+        } else {
+            id = ev.target.id
+        }
+        if(id !== "abcd"){
+            this.props.history.push({
+                pathname: '/ProductPage',
+                state: { img: name, price: price },
+            })
+        }
+    }
+
     render() {
         return (
             <>
                 <div className="mainContainer3">
-                    <h6>NEW PRODUCTS<br /><img src={logo} /></h6>
+                    <h6>{this.props.name ? "RELATED PRODUCTS" : "NEW PRODUCTS"}<br /><img src={logo} /></h6>
                     <div className="productList">
                         <div
                             onMouseOver={() => this.divHover(1, "a")}
                             onMouseOut={() => this.divHover(1)}
+                            onClick={(ev) => this.changePath(first, "399", ev)}
                         >
                             <span className="productImage" style={{ backgroundImage: `url(${first})` }}>
 
                             </span>
                             <span id="productReview1">
                                 <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
-                                <span className="icon2"><VisibilityOutlinedIcon fontSize="sm" /></span>
+                                <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
                                 <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
                             </span>
                             <span className="title">
@@ -65,13 +81,14 @@ class ThirdPage extends Component {
                         <div
                             onMouseOver={() => this.divHover(2, "a")}
                             onMouseOut={() => this.divHover(2)}
+                            onClick={(ev) => this.changePath(second, "399", ev)}
                         >
                             <span className="productImage" style={{ backgroundImage: `url(${second})` }}>
 
                             </span>
                             <span id="productReview2">
                                 <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
-                                <span className="icon2"><VisibilityOutlinedIcon fontSize="sm" /></span>
+                                <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
                                 <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
                             </span>
                             <span className="title">
@@ -87,13 +104,14 @@ class ThirdPage extends Component {
                         <div
                             onMouseOver={() => this.divHover(3, "a")}
                             onMouseOut={() => this.divHover(3)}
+                            onClick={(ev) => this.changePath(third, "399", ev)}
                         >
                             <span className="productImage" style={{ backgroundImage: `url(${third})` }}>
 
                             </span>
                             <span id="productReview3">
                                 <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
-                                <span className="icon2"><VisibilityOutlinedIcon fontSize="sm" /></span>
+                                <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
                                 <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
                             </span>
                             <span className="title">
@@ -106,73 +124,81 @@ class ThirdPage extends Component {
                             </span>
                         </div>
 
-                        <div
-                            onMouseOver={() => this.divHover(4, "a")}
-                            onMouseOut={() => this.divHover(4)}
-                        >
-                            <span className="productImage" style={{ backgroundImage: `url(${forth})` }}>
+                        {!this.props.name ?
+                            <>
+                                <div
+                                    onMouseOver={() => this.divHover(4, "a")}
+                                    onMouseOut={() => this.divHover(4)}
+                                    onClick={(ev) => this.changePath(forth, "399", ev)}
+                                >
+                                    <span className="productImage" style={{ backgroundImage: `url(${forth})` }}>
 
-                            </span>
-                            <span id="productReview4">
-                                <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
-                                <span className="icon2"><VisibilityOutlinedIcon fontSize="sm" /></span>
-                                <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
-                            </span>
-                            <span className="title">
-                                <p className="titlep">Curabitur cursus designs</p>
-                                <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
-                            </span>
-                            <span className="price">
-                                <p className="cPrice">$259.00</p>
-                                {/* <p className="sPrice">$300.00</p> */}
-                            </span>
-                        </div>
+                                    </span>
+                                    <span id="productReview4">
+                                        <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
+                                        <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
+                                        <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
+                                    </span>
+                                    <span className="title">
+                                        <p className="titlep">Curabitur cursus designs</p>
+                                        <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
+                                    </span>
+                                    <span className="price">
+                                        <p className="cPrice">$259.00</p>
+                                        {/* <p className="sPrice">$300.00</p> */}
+                                    </span>
+                                </div>
 
-                        <div
-                            onMouseOver={() => this.divHover(5, "a")}
-                            onMouseOut={() => this.divHover(5)}
-                        >
-                            <span className="productImage" style={{ backgroundImage: `url(${fifth})` }}>
+                                <div
+                                    onMouseOver={() => this.divHover(5, "a")}
+                                    onMouseOut={() => this.divHover(5)}
+                                    onClick={(ev) => this.changePath(fifth, "399", ev)}
+                                >
+                                    <span className="productImage" style={{ backgroundImage: `url(${fifth})` }}>
 
-                            </span>
-                            <span id="productReview5">
-                                <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
-                                <span className="icon2"><VisibilityOutlinedIcon fontSize="sm" /></span>
-                                <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
-                            </span>
-                            <span className="title">
-                                <p className="titlep">Curabitur cursus designs</p>
-                                <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
-                            </span>
-                            <span className="price">
-                                <p className="cPrice">$259.00</p>
-                                <p className="sPrice">$300.00</p>
-                            </span>
-                        </div>
+                                    </span>
+                                    <span id="productReview5">
+                                        <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
+                                        <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
+                                        <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
+                                    </span>
+                                    <span className="title">
+                                        <p className="titlep">Curabitur cursus designs</p>
+                                        <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
+                                    </span>
+                                    <span className="price">
+                                        <p className="cPrice">$259.00</p>
+                                        <p className="sPrice">$300.00</p>
+                                    </span>
+                                </div>
 
-                        <div
-                            onMouseOver={() => this.divHover(6, "a")}
-                            onMouseOut={() => this.divHover(6)}
-                        >
-                            <span className="productImage" style={{ backgroundImage: `url(${sixth})` }}>
+                                <div
+                                    onMouseOver={() => this.divHover(6, "a")}
+                                    onMouseOut={() => this.divHover(6)}
+                                    onClick={(ev) => this.changePath(sixth, "399", ev)}
+                                >
+                                    <span className="productImage" style={{ backgroundImage: `url(${sixth})` }}>
 
-                            </span>
-                            <span id="productReview6">
-                                <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
-                                <span className="icon2"><VisibilityOutlinedIcon fontSize="sm" /></span>
-                                <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
-                            </span>
-                            <span className="title">
-                                <p className="titlep">Curabitur cursus designs</p>
-                                <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
-                            </span>
-                            <span className="price">
-                                <p className="cPrice">$259.00</p>
-                                <p className="sPrice">$300.00</p>
-                            </span>
-                        </div>
+                                    </span>
+                                    <span id="productReview6">
+                                        <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
+                                        <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
+                                        <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
+                                    </span>
+                                    <span className="title">
+                                        <p className="titlep">Curabitur cursus designs</p>
+                                        <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
+                                    </span>
+                                    <span className="price">
+                                        <p className="cPrice">$259.00</p>
+                                        <p className="sPrice">$300.00</p>
+                                    </span>
+                                </div>
+                            </>
+                            : null}
                     </div>
-                </div >
+
+                </div>
             </>
         )
     }

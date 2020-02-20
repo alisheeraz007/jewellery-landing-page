@@ -29,31 +29,47 @@ class SecondPage extends Component {
         }
     }
 
+    changePath = (name, price) => {
+        // console.log(this.props.history)
+        this.props.history.push({
+            pathname: '/ProductPage',
+            state: { img: name, price: price },
+        })
+    }
+
     render() {
         return (
             <>
                 <div className="mainContainer2">
                     <h6>{this.props.name ? "FEATURED PRODUCTS" : "POPULAR COLLECTIONS"}<br /><img src={logo} /></h6>
                     <div className="collectionDiv">
-                        <div>
+                        <div
+                            onClick={() => this.changePath(first, "249")}
+                        >
                             <img src={first} />
                             <h6>BRACELETS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
                         </div>
-                        <div>
+                        <div
+                            onClick={() => this.changePath(second, "289")}
+                        >
                             <img src={second} />
                             <h6>EARINGS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
                         </div>
-                        <div>
+                        <div
+                            onClick={() => this.changePath(third, "399")}
+                        >
                             <img src={third} />
                             <h6>NECKLACES</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
                         </div>
-                        <div>
+                        <div
+                            onClick={() => this.changePath(forth, "459")}
+                        >
                             <img src={forth} />
                             <h6>RINGS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
@@ -62,28 +78,44 @@ class SecondPage extends Component {
                     </div>
 
                     <Carousel className="collectionDivM" autoplay>
-                        <div id="mDiv1" style={{ zIndex: 2, opacity: 1 }}>
+                        <div
+                            id="mDiv1"
+                            style={{ zIndex: 2, opacity: 1 }}
+                            onClick={() => this.changePath(firstM, "249")}
+                        >
                             <img src={firstM} />
                             <h6>BRACELETS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
                         </div>
 
-                        <div id="mDiv2" style={{ zIndex: 1, opacity: 0 }}>
+                        <div
+                            id="mDiv2"
+                            style={{ zIndex: 1, opacity: 0 }}
+                            onClick={() => this.changePath(secondM, "289")}
+                        >
                             <img src={secondM} />
                             <h6>BRACELETS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
                         </div>
 
-                        <div id="mDiv2" style={{ zIndex: 1, opacity: 0 }}>
+                        <div
+                            id="mDiv2"
+                            style={{ zIndex: 1, opacity: 0 }}
+                            onClick={() => this.changePath(thirdM, "399")}
+                        >
                             <img src={thirdM} />
                             <h6>BRACELETS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
                         </div>
 
-                        <div id="mDiv2" style={{ zIndex: 1, opacity: 0 }}>
+                        <div
+                            id="mDiv2"
+                            style={{ zIndex: 1, opacity: 0 }}
+                            onClick={() => this.changePath(forthM, "459")}
+                        >
                             <img src={forthM} />
                             <h6>BRACELETS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />

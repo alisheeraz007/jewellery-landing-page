@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Tooltip, Menu } from 'antd';
+import { Tooltip, Menu, Drawer } from 'antd';
 import Diamond from '../business-set-1040-512.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import CollectionTable from './collectionTable';
@@ -13,6 +13,17 @@ import MenuIcon from '@material-ui/icons/Menu';
 import PersonIcon from '@material-ui/icons/Person';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Collapse, Icon } from 'antd';
+
+const { Panel } = Collapse;
+
+const customPanelStyle = {
+    background: '#f7f7f7',
+    borderRadius: 4,
+    border: 0,
+    overflow: 'hidden',
+    marginBottom: 2
+};
 
 class Header extends Component {
     constructor() {
@@ -110,12 +121,21 @@ class Header extends Component {
         }
     }
 
+    showDrawer = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    onClose = () => {
+        this.setState({
+            visible: false,
+        });
+    };
+
     render() {
         return (
             <div className="header">
-                <div className="menu">
-
-                </div>
                 <div className="firstHeader">
                     <span className="phone">PHONE SHOPING (01) 123 456 UJ</span>
 
@@ -184,7 +204,72 @@ class Header extends Component {
                         <span className="logo"><img src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?82" /></span>
                     </span>
                     <div className="mobileMenu">
-                        <MenuIcon fontSize="large" />
+                        <Drawer
+                            title="Basic Drawer"
+                            placement="left"
+                            closable={false}
+                            onClose={this.onClose}
+                            visible={this.state.visible}
+                        >
+                            <p
+                                style={{
+                                    padding: "12px 16px",
+                                    width: "100%",
+                                    color: "black",
+                                    color: 'rgba(0, 0, 0, 0.85)',
+                                    paddingLeft: "40px",
+                                    marginBottom: 2,
+                                    fontSize: 14
+                                }}
+                            >
+                                HOME
+                                </p>
+                            <Collapse
+                                bordered={false}
+                                defaultActiveKey={['0']}
+                                expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
+                            >
+                                <Panel header="COLLECTIONS" key="1" style={customPanelStyle}>
+                                    <p>ABC</p>
+                                    <p>ABC</p>
+                                    <p>ABC</p>
+                                    <p>ABC</p>
+                                    <p>ABC</p>
+                                </Panel>
+                            </Collapse>
+                            <Collapse
+                                bordered={false}
+                                defaultActiveKey={['2']}
+                                expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
+                            >
+                                <Panel header="PAGES" key="1" style={customPanelStyle}>
+                                    <p>ABC</p>
+                                </Panel>
+                            </Collapse>
+                            <Collapse
+                                bordered={false}
+                                defaultActiveKey={['3']}
+                                expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
+                            >
+                                <Panel header="BLOGS" key="1" style={customPanelStyle}>
+                                    <p>ABC</p>
+                                </Panel>
+                            </Collapse>
+                            <p
+                                style={{
+                                    padding: "12px 16px",
+                                    width: "100%",
+                                    color: 'rgba(0, 0, 0, 0.85)',
+                                    background: "rgb(247, 247, 247)",
+                                    paddingLeft: "40px",
+                                    marginBottom: 2,
+                                    fontSize: 14
+                                }}
+                            >
+                                CONTACT
+                                </p>
+                        </Drawer>
+                        <MenuIcon onClick={this.showDrawer} fontSize="large" />
                         <PersonIcon
                             fontSize="large"
                             onMouseOver={() => this.mobileLoginDiv("a")}

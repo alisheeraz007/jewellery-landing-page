@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import Header from './components/Header';
 import firebase from 'firebase';
 import config from './config/configKey'
+import ProductPage from './components/productPage';
 
 firebase.initializeApp(config);
 
@@ -26,6 +27,12 @@ class App extends Component {
           <Route
             exact path="/"
             render={() => <MainPage
+              state={this.state}
+            />} />
+
+          <Route
+            exact path="/ProductPage"
+            render={() => <ProductPage
               state={this.state}
             />} />
 

@@ -15,6 +15,7 @@ import ThirdPage from './ThirdPage';
 import ForthPage from './forthPage';
 import FifthPage from './FifthPage';
 import SixthPage from './sixthPage';
+import SeventhPage from './seventhPage';
 
 
 class MainPage extends Component {
@@ -151,6 +152,12 @@ class MainPage extends Component {
                 <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
                     <div className="secondContainer">
                         <SixthPage />
+                    </div>
+                </ScrollAnimation>
+
+                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
+                    <div className="secondContainer">
+                        <SeventhPage />
                     </div>
                 </ScrollAnimation>
             </>
