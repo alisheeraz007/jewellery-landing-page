@@ -51,6 +51,22 @@ class MainPage extends Component {
         })
     }
 
+    componentWillMount() {
+        setInterval(() => {
+            this.setState({
+                slide: this.state.slide === 1 ? 2 : 1
+            }, () => {
+                if (this.state.slide === 1) {
+                    document.getElementById("slider1").style.opacity = 1;
+                    document.getElementById("slider2").style.opacity = 0;
+                } else {
+                    document.getElementById("slider1").style.opacity = 0;
+                    document.getElementById("slider2").style.opacity = 1;
+                }
+            })
+        },10000)
+    }
+
     render() {
         return (
             <>
