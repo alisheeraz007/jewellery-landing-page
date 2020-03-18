@@ -5,10 +5,10 @@ import 'antd/dist/antd.css';
 import MainPage from './components/MainPage'
 import { getData } from './actions/action';
 import { connect } from 'react-redux'
-import Header from './components/Header';
 import firebase from 'firebase';
 import config from './config/configKey'
-import ProductPage from './components/productPage';
+import Footer from './components/insideMainPage.js/Footer';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 firebase.initializeApp(config);
 
@@ -22,20 +22,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
         <Router>
           <Route
             exact path="/"
             render={() => <MainPage
               state={this.state}
             />} />
-
-          <Route
-            exact path="/ProductPage"
-            render={() => <ProductPage
+            <Route
+            exact path="/*/home"
+            render={() => <MainPage
               state={this.state}
             />} />
-
+          <ScrollAnimation animateOnce animateIn="fadeIn" duration={2}>
+            <Footer />
+          </ScrollAnimation>
         </Router>
       </div>
     )
@@ -43,7 +43,6 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state)
   return {
     state
   }

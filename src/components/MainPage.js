@@ -5,17 +5,11 @@ import { store } from '../store';
 import { capitalizeFirstLetters } from '../common/index'
 import { add } from '../actions/action';
 import firebase from 'firebase'
-import head from '../slide-image-caption-1.webp'
-import head2 from '../slide-image-caption-2.webp'
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import Header from './insideMainPage.js/Header';
+import Sllider from './insideMainPage.js/Slider';
+import AfterSlider from './insideMainPage.js/AfterSlider';
+import ImagesView from './insideMainPage.js/ImagesView';
 import ScrollAnimation from 'react-animate-on-scroll';
-import SecondPage from './secondPage';
-import ThirdPage from './ThirdPage';
-import ForthPage from './forthPage';
-import FifthPage from './FifthPage';
-import SixthPage from './sixthPage';
-import SeventhPage from './seventhPage';
 
 
 class MainPage extends Component {
@@ -26,163 +20,29 @@ class MainPage extends Component {
         }
     }
 
-    sliderIconTrue = (name) => {
-        if (name) {
-            document.getElementById("sliderIcon1").style.opacity = 1
-            document.getElementById("sliderIcon2").style.opacity = 1
-        }
-        else {
-            document.getElementById("sliderIcon1").style.opacity = 0
-            document.getElementById("sliderIcon2").style.opacity = 0
-        }
-    }
-
-    setSlide = () => {
-        this.setState({
-            slide: this.state.slide === 1 ? 2 : 1
-        }, () => {
-            if (this.state.slide === 1) {
-                document.getElementById("slider1").style.opacity = 1;
-                document.getElementById("slider2").style.opacity = 0;
-            } else {
-                document.getElementById("slider1").style.opacity = 0;
-                document.getElementById("slider2").style.opacity = 1;
-            }
-        })
-    }
-
-    componentWillMount() {
-        setInterval(() => {
-            this.setState({
-                slide: this.state.slide === 1 ? 2 : 1
-            }, () => {
-                if (this.state.slide === 1) {
-                    document.getElementById("slider1").style.opacity = 1;
-                    document.getElementById("slider2").style.opacity = 0;
-                } else {
-                    document.getElementById("slider1").style.opacity = 0;
-                    document.getElementById("slider2").style.opacity = 1;
-                }
-            })
-        },10000)
-    }
-
     render() {
         return (
             <>
-                <div style={{ height: "100vh" }} className="mainContainer">
-                    {this.state.slide === 1 ?
-                        <div className="sliderContentDiv" onMouseOver={() => this.sliderIconTrue("a")} onMouseOut={() => this.sliderIconTrue()}>
-                            <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                                <p className="live">Live the moment</p>
-                            </ScrollAnimation>
-                            <ArrowBackIosIcon
-                                id="sliderIcon1"
-                                style={{ float: "left" }}
-                                onClick={() => this.setSlide()}
-                            />
-                            <ScrollAnimation animateOnce duration={1} animateIn="slideInLeft">
-                                <img src={head} />
-                            </ScrollAnimation>
+                <div className="mainContainer">
+                    <Header />
+                    <ScrollAnimation animateOnce animateIn="fadeIn" duration={2}>
+                        <Sllider />
+                    </ScrollAnimation>
 
-                            <ArrowForwardIosIcon
-                                id="sliderIcon2"
-                                style={{ float: "right" }}
-                                onClick={() => this.setSlide()}
-                            />
-                            <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                                <p className="p1">
-                                    LOREM IPSUM DOLOR SITAMET ABC ADJ KNKLNAS KKLNADS NN
-                                </p>
-                                <a className="seeButton">
-                                    SEE COLLECTION
-                        </a>
-                            </ScrollAnimation>
-                        </div>
-                        : null}
+                    <ScrollAnimation animateOnce animateIn="fadeIn" duration={2}>
+                        <AfterSlider />
+                    </ScrollAnimation>
 
-                    {this.state.slide === 2 ?
-                        <div className="sliderContentDiv2" onMouseOver={() => this.sliderIconTrue("a")} onMouseOut={() => this.sliderIconTrue()}>
-                            <ArrowBackIosIcon
-                                id="sliderIcon1"
-                                style={{ float: "left" }}
-                                onClick={() => this.setSlide()}
-                            />
-                            <ScrollAnimation animateOnce duration={1} animateIn="slideInLeft">
-                                <img src={head2} />
-                            </ScrollAnimation>
-
-                            <ArrowForwardIosIcon
-                                id="sliderIcon2"
-                                style={{ float: "right" }}
-                                onClick={() => this.setSlide()}
-                            />
-                            <ScrollAnimation animateOnce duration={1} animateIn="slideInLeft">
-                                <span className="p2">Love's imbrace</span>
-                            </ScrollAnimation>
-                            <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                                <a className="seeButton">
-                                    SEE COLLECTION
-                        </a>
-                            </ScrollAnimation>
-                        </div>
-                        : null}
-
-                    < div className="slider1" id="slider1">
-
-                    </div>
-
-                    <div className="slider2" id="slider2">
-
-                    </div>
-                </div >
-
-                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                    <div className="secondContainer">
-                        <SecondPage />
-                    </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                    <div className="secondContainer">
-                        <ThirdPage />
-                    </div>
-                </ScrollAnimation>
-
-                <div className="thirdContainer">
-                    <ForthPage />
+                    <ScrollAnimation animateOnce animateIn="fadeIn" duration={2}>
+                        <ImagesView />
+                    </ScrollAnimation>
                 </div>
-
-                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                    <div className="secondContainer">
-                        <FifthPage />
-                    </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                    <div className="secondContainer">
-                        <SecondPage name="a" />
-                    </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                    <div className="secondContainer">
-                        <SixthPage />
-                    </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animateOnce duration={2} animateIn="fadeIn">
-                    <div className="secondContainer">
-                        <SeventhPage />
-                    </div>
-                </ScrollAnimation>
             </>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    // console.log(state)
     return {
         state
     }
