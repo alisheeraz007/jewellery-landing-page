@@ -9,6 +9,7 @@ import firebase from 'firebase';
 import config from './config/configKey'
 import Footer from './components/insideMainPage.js/Footer';
 import ScrollAnimation from 'react-animate-on-scroll';
+import AfterSlider from './components/insideMainPage.js/AfterSlider';
 
 firebase.initializeApp(config);
 
@@ -30,7 +31,7 @@ class App extends Component {
             />} />
             <Route
             exact path="/*/home"
-            render={() => <MainPage
+            render={() => <AfterSlider
               state={this.state}
             />} />
           <ScrollAnimation animateOnce animateIn="fadeIn" duration={2}>

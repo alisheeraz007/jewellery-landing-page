@@ -7,6 +7,7 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
 import { Tooltip } from '@material-ui/core';
+import { a } from 'react-router-dom';
 
 class Footer extends Component {
     constructor() {
@@ -23,7 +24,7 @@ class Footer extends Component {
 
                     <div style={{ width: "30%", display: "flex", alignItems: "left", flexDirection: "column", height: 350, justifyContent: "space-evenly" }}>
                         <img style={{ width: 150, marginBottom: 20 }} src={logo} />
-                        <img style={{ width: 130 }} src={profile} />
+                        <a href="#" style={{ width: 130 }}><img style={{ width: 130 }} src={profile} /></a>
                         <p style={{ fontSize: 16, fontWeight: 300, color: "#8d8d8d", lineHeight: 1.5 }}>
                             Architecture is both the <br /> process and the product <br /> of planning, designing...
                         </p>
@@ -62,23 +63,23 @@ class Footer extends Component {
                         </p>
                         <div className="inputtDiv">
                             <Tooltip title="Facebook">
-                                <FacebookIcon fontSize="small" style={{ color: "#8d8d8d",cursor: "pointer" }} />
+                                <a href="#" ><FacebookIcon fontSize="small" style={{ color: "#8d8d8d", cursor: "pointer" }} /></a>
                             </Tooltip>
 
                             <Tooltip title="Twitter">
-                                <Twitter fontSize="small" style={{ color: "#8d8d8d",cursor: "pointer", marginLeft: 15 }} />
+                                <a href="#"><Twitter fontSize="small" style={{ color: "#8d8d8d", cursor: "pointer", marginLeft: 15 }} /></a>
                             </Tooltip>
 
                             <Tooltip title="Printerest">
-                                <PinterestIcon fontSize="small" style={{ color: "#8d8d8d",cursor: "pointer", marginLeft: 15 }} />
+                                <a href="#"><PinterestIcon fontSize="small" style={{ color: "#8d8d8d", cursor: "pointer", marginLeft: 15 }} /></a>
                             </Tooltip>
 
                             <Tooltip title="Instgram">
-                                <InstagramIcon fontSize="small" style={{ color: "#8d8d8d",cursor: "pointer", marginLeft: 15 }} />
+                                <a href="#"><InstagramIcon fontSize="small" style={{ color: "#8d8d8d", cursor: "pointer", marginLeft: 15 }} /></a>
                             </Tooltip>
 
                             <Tooltip title="Dribbble">
-                                <SportsBasketballIcon fontSize="small" style={{ color: "#8d8d8d",cursor: "pointer", marginLeft: 15 }} />
+                                <a href="#"><SportsBasketballIcon fontSize="small" style={{ color: "#8d8d8d", cursor: "pointer", marginLeft: 15 }} /></a>
                             </Tooltip>
                         </div>
                     </div>
