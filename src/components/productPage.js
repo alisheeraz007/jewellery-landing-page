@@ -9,6 +9,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import ThirdPage from './ThirdPage';
 import SeventhPage from './seventhPage';
 import SixthPage from './sixthPage';
+import { popularCollection } from '../global'
 
 class ProductPage extends Component {
     constructor(props) {
@@ -61,7 +62,11 @@ class ProductPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
-      }
+        let collection = popularCollection();
+        let params = this.props.match.params.id
+        let obj = collection.find(a => a.id === params)
+        console.log(obj)
+    }
 
     render() {
         return (
@@ -111,7 +116,7 @@ class ProductPage extends Component {
                                         <p>
                                             Nam libero tempore, cum soluta nobis
                                             est eligendi optio cumque nihil impedit quo minus id
-                                             quod maxime placeat facere possimus, omnis amet voluptas
+                                            quod maxime placeat facere possimus, omnis amet voluptas
                                           assumenda est, omnis dolor repellendus quis nostrum.<br />
                                             Temporibus autem quibusdam et
                                              aut officiis debitis aut rerum dolorem necessitatibus saepe eveniet ut et neque

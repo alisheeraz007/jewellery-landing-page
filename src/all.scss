@@ -509,62 +509,7 @@ html, body{
         margin-right: auto;
         transition: 0.7s;
     }
-    #productReview1{
-        margin-top: -18px;
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview2{
-        margin-top: -18px;
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview3{
-        margin-top: -18px;
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview4{
-        margin-top: -18px;
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview5{
-        margin-top: -18px;
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview6{
+    #productReview{
         margin-top: -18px;
         display: block;
         width: 100%;
@@ -989,22 +934,7 @@ html, body{
     .productList div{
         height: 300px !important;
     }
-    #productReview1{
-        margin-top: 0px !important;
-    }
-    #productReview2{
-        margin-top: 0px !important;
-    }
-    #productReview3{
-        margin-top: 0px !important;
-    }
-    #productReview4{
-        margin-top: 0px !important;
-    }
-    #productReview5{
-        margin-top: 0px !important;
-    }
-    #productReview6{
+    #productReview{
         margin-top: 0px !important;
     }
 }
@@ -1435,57 +1365,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
         margin-right: auto;
         transition: 0.7s;
     }
-    #productReview1{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview2{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview3{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview4{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview5{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview6{
+    #productReview{
         display: block;
         width: 100%;
         height: 30px;
@@ -2309,57 +2189,7 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
         margin-right: auto;
         transition: 0.7s;
     }
-    #productReview1{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview2{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview3{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview4{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview5{
-        display: block;
-        width: 100%;
-        height: 30px;
-        background-color: white;
-        border-top: 1px solid lightgray;
-        color: black;
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #productReview6{
+    #productReview{
         display: block;
         width: 100%;
         height: 30px;
@@ -2753,5 +2583,16 @@ box-shadow: 0px 0px 20px 0px rgba(219,215,219,1);
         width: 50%;
         padding-left: 20px;
     }
-    
+}
+
+.zoomer{
+    overflow: hidden;
+    &:hover{
+        #productReview{
+            opacity: 1;
+        }
+        .productImage{
+            width: 95%;
+        }
+    }
 }

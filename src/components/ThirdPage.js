@@ -17,6 +17,8 @@ import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteOutlined';
 import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 
+import { popularCollection } from '../global'
+
 
 class ThirdPage extends Component {
     constructor(props) {
@@ -27,35 +29,40 @@ class ThirdPage extends Component {
     }
 
     divHover = (index, name) => {
-        if (name) {
-            document.getElementById(`productReview${index}`).style.opacity = 1
-        } else {
-            document.getElementById(`productReview${index}`).style.opacity = 0
-        }
+        // if (name) {
+        //     console.log(index)
+        //     document.getElementById(`productReview${index}`).style.opacity = 1
+        // } else {
+        //     console.log(index)
+
+        //     document.getElementById(`productReview${index}`).style.opacity = 0
+        // }
     }
 
-    changePath = (name, price, ev) => {
+    changePath = (name, price, ev, item) => {
         let id = ""
         if (ev.target.nodeName !== "SPAN") {
             id = ev.target.parentNode.id
         } else {
             id = ev.target.id
         }
-        if(id !== "abcd"){
+        if (id !== "abcd") {
             this.props.history.push({
-                pathname: '/ProductPage',
+                pathname: `/ProductPage/${item.id}`,
                 state: { img: name, price: price },
             })
         }
     }
 
     render() {
+        let collection = popularCollection().filter(a => a.popolarity === "new")
+        // console.log(this.props.names)
         return (
             <>
                 <div className="mainContainer3">
                     <h6>{this.props.name ? "RELATED PRODUCTS" : "NEW PRODUCTS"}<br /><img src={logo} /></h6>
                     <div className="productList">
-                        <div
+                        {/* <div
                             onMouseOver={() => this.divHover(1, "a")}
                             onMouseOut={() => this.divHover(1)}
                             onClick={(ev) => this.changePath(first, "399", ev)}
@@ -97,7 +104,6 @@ class ThirdPage extends Component {
                             </span>
                             <span className="price">
                                 <p className="cPrice">$259.00</p>
-                                {/* <p className="sPrice">$300.00</p> */}
                             </span>
                         </div>
 
@@ -122,9 +128,9 @@ class ThirdPage extends Component {
                                 <p className="cPrice">$259.00</p>
                                 <p className="sPrice">$300.00</p>
                             </span>
-                        </div>
+                        </div> */}
 
-                        {!this.props.name ?
+                        {/* {!this.props.name ?
                             <>
                                 <div
                                     onMouseOver={() => this.divHover(4, "a")}
@@ -145,7 +151,6 @@ class ThirdPage extends Component {
                                     </span>
                                     <span className="price">
                                         <p className="cPrice">$259.00</p>
-                                        {/* <p className="sPrice">$300.00</p> */}
                                     </span>
                                 </div>
 
@@ -195,7 +200,34 @@ class ThirdPage extends Component {
                                     </span>
                                 </div>
                             </>
-                            : null}
+                            : null} */}
+
+                        {collection.map((item, index) => {
+                            return (
+                                <div
+                                    className="zoomer"
+                                    onClick={(ev) => this.changePath(item.image, "399", ev, item)}
+                                >
+                                    <span className="productImage" style={{ backgroundImage: `url(${item.image})` }}>
+
+                                    </span>
+                                    <span id="productReview">
+                                        <span className="icon1"><FormatListBulletedIcon fontSize="sm" /></span>
+                                        <span id="abcd" className="icon2"><VisibilityOutlinedIcon id="abcd" fontSize="sm" /></span>
+                                        <span className="icon3"><FavoriteOutlinedIcon fontSize="sm" /></span>
+                                    </span>
+                                    <span className="title">
+                                        <p className="titlep">{item.title}</p>
+                                        <p><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarIcon style={{ color: "#a07936" }} /><StarHalfIcon style={{ color: "#a07936" }} /></p>
+                                    </span>
+                                    <span className="price">
+                                        <p className="cPrice">{item.salePrice}</p>
+                                        <p className="sPrice">{item.originalPrice}</p>
+                                    </span>
+                                </div>
+                            )
+                        })}
+
                     </div>
 
                 </div>

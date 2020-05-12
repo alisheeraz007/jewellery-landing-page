@@ -20,6 +20,7 @@ import secondM from '../product images mobile/second.webp'
 import thirdM from '../product images mobile/third.webp'
 import forthM from '../product images mobile/forth.webp'
 import { Carousel } from 'antd';
+import { popularCollection } from '../global'
 
 class SecondPage extends Component {
     constructor(props) {
@@ -29,21 +30,22 @@ class SecondPage extends Component {
         }
     }
 
-    changePath = (name, price) => {
+    changePath = (name, price, item) => {
         // console.log(this.props.history)
         this.props.history.push({
-            pathname: '/ProductPage',
+            pathname: `/ProductPage/${item.id}`,
             state: { img: name, price: price },
         })
     }
 
     render() {
+        let collection = this.props.name ? popularCollection().filter(a => a.popolarity === 'featured') : popularCollection().filter(a => a.popolarity === 'popular')
         return (
             <>
                 <div className="mainContainer2">
                     <h6>{this.props.name ? "FEATURED PRODUCTS" : "POPULAR COLLECTIONS"}<br /><img src={logo} /></h6>
                     <div className="collectionDiv">
-                        <div
+                        {/* <div
                             onClick={() => this.changePath(first, "249")}
                         >
                             <img src={first} />
@@ -74,11 +76,27 @@ class SecondPage extends Component {
                             <h6>RINGS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
-                        </div>
+                        </div> */}
+
+                        {collection.length ?
+                            collection.map((item) => {
+                                return (
+                                    <div
+                                        onClick={() => this.changePath(forth, "459", item)}
+                                    >
+                                        <img src={item.image} />
+                                        <h6>{item.heading}</h6>
+                                        <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                                        <p>{item.para}</p>
+                                    </div>
+                                )
+                            })
+                            : null}
+
                     </div>
 
                     <Carousel className="collectionDivM" autoplay>
-                        <div
+                        {/* <div
                             id="mDiv1"
                             style={{ zIndex: 2, opacity: 1 }}
                             onClick={() => this.changePath(firstM, "249")}
@@ -120,7 +138,22 @@ class SecondPage extends Component {
                             <h6>BRACELETS</h6>
                             <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
                             <p>See the Collection</p>
-                        </div>
+                        </div> */}
+                        {collection.length ?
+                            collection.map((item, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        onClick={() => this.changePath(forth, "459", item)}
+                                    >
+                                        <img src={item.image} />
+                                        <h6>{item.heading}</h6>
+                                        <hr style={{ width: "15%", backgroundColor: "#a07936", border: "0px", height: 1 }} />
+                                        <p>{item.para}</p>
+                                    </div>
+                                )
+                            })
+                            : null}
                     </Carousel>
 
                     {/* <div className="collectionDivM">

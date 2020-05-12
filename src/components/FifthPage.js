@@ -6,6 +6,7 @@ import logo from '../home_line.png'
 import news from '../news.webp'
 import PersonIcon from '@material-ui/icons/Person';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import { popularCollection } from '../global'
 
 class FifthPage extends Component {
     constructor(props) {
