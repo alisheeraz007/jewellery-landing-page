@@ -14,6 +14,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Collapse, Icon } from 'antd';
+import firebase from 'firebase'
 
 const { Panel } = Collapse;
 
@@ -133,6 +134,18 @@ class Header extends Component {
         });
     };
 
+    login = (ev) => {
+        ev.preventDefault()
+        let { email, password } = this.state
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .catch((error) => {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // ...
+            });
+    }
+
     render() {
         return (
             <div className="header">
@@ -168,6 +181,7 @@ class Header extends Component {
                                     </span>
                                     <input
                                         type="text"
+                                        onChange={(ev) => this.setState({ email: ev.target.value })}
                                     />
                                     <span
                                         style={{ display: "block", fontSize: 16, marginBottom: 5, fontWeight: 400, marginTop: 15 }}
@@ -176,8 +190,9 @@ class Header extends Component {
                                     </span>
                                     <input
                                         type="text"
+                                        onChange={(ev) => this.setState({ password: ev.target.value })}
                                     />
-                                    <button className="loginButton">
+                                    <button onClick={(ev)=>this.login(ev)} className="loginButton">
                                         LOGIN
                                         </button>
                                     <button className="loginButton">
